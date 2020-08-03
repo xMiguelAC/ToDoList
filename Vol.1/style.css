@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(./img/bg.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+/* h1{
+    color: white;
+} */
+
+.container{
+    background-color: rgba(255, 255, 255, 0.3555);
+    /* opacity: 0.3555; */
+    border-radius: 25px 25px 0px 0px;
+    width: 90%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding-bottom: 100vh;
+}
+
+.main{
+    padding: 30px;
+    /* background: rgba(70, 130, 180, 0.6); */
+    background: rgba(34, 135, 34, 0.6);
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: inherit;
+    max-width: inherit;
+    width: inherit;
+}
+
+/* h1, .title{
+    color: black;
+	font-size: 40px;
+	text-shadow: -1px 1px 2px #fff,
+				  1px 1px 2px #fff,
+				  1px -1px 0 #fff,
+				  -1px -1px 0 #fff
+} */
+
+h1{
+    color: white;
+	font-size: 40px;
+	text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000
+}
+
+.main h1{
+    text-align: center;
+}
+
+.add{
+    padding: 20px;
+    font-weight: lighter;
+}
+
+@media only screen and (max-width: 768px){
+    .container{display: none;}
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+/*  Andamos ruleta, en una camioneta, recogimos la vaina que llego la avionetaaaa 🎵🎵  */

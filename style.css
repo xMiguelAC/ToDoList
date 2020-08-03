@@ -3,79 +3,221 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
-body{
-    background: url(./img/bg.jpg) no-repeat center fixed;
-    background-size: cover;
+:root{
+    --colorBase: #5e877b;
 }
 
-/* h1{
-    color: white;
-} */
+body{
+    background: var(--colorBase);
+}
 
-.container{
-    background-color: rgba(255, 255, 255, 0.3555);
-    /* opacity: 0.3555; */
-    border-radius: 25px 25px 0px 0px;
+.neum{
     width: 90%;
-    max-width: 1100px;
+    max-width: 900px;
+    height: 100vh;
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
-    padding-bottom: 100vh;
+    padding-bottom: 55vh;
+
+    border-radius: 50px 50px 0px 0px;
+    background: linear-gradient(145deg, #557a6f, #659084);
+    box-shadow:  32px 32px 64px #507369, 
+                 -32px -32px 64px #6c9b8d;
 }
 
-.main{
+.header{
     padding: 30px;
-    /* background: rgba(70, 130, 180, 0.6); */
-    background: rgba(34, 135, 34, 0.6);
-    position: absolute;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: inherit;
-    width: inherit;
+
+    max-width: inherit;
+    width: 100%;
 }
 
-/* h1, .title{
-    color: black;
-	font-size: 40px;
-	text-shadow: -1px 1px 2px #fff,
-				  1px 1px 2px #fff,
-				  1px -1px 0 #fff,
-				  -1px -1px 0 #fff
-} */
-
-h1, .title{
-    color: white;
-	font-size: 40px;
-	text-shadow: -1px 1px 2px #000,
-				  1px 1px 2px #000,
-				  1px -1px 0 #000,
-				  -1px -1px 0 #000
+.title{
+    font-size: 3.75rem;
 }
 
-.main h1{
+.title, .addBar input[type=submit], ::placeholder{
+    color: #425e56;
+    text-shadow: 1px 1px 1px #6c9b8d;
+    opacity: 1; /* Firefox */
+}
+
+.searchBar, .addBar, .title{
     text-align: center;
 }
+.searchBar input[type=text]{
+    width: 50%;
+}
+.searchBar input[type=text], .addBar input[type=text]{
+    border: 0;
+    appearance: none;
+    outline: 0;
+    margin-right: 25px;
+    padding: 10px 20px;
+    border-radius: 08px;
+    background: #5e877b;
+    box-shadow: inset 2px 2px 5px #4b6c62, 
+               inset -5px -5px 10px #71a294;
+}
+
+.searchBar input[type=text]:focus, .addBar input[type=text]:focus{
+    transition: all 0.2s ease-in-out;
+    box-shadow: inset 1px 1px 2px #4b6c62, 
+                inset -1px -1px 2px #71a294;
+}
+
+/* .addBar input[type=submit]:focus{            ***quitarle el borde del boton***
+    border: none;
+} */
+
+
+  .task input:checked{
+    background-color: #4b6c62;
+  }
+
+.searchBar input[type=submit], .addBar input[type=submit]{
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 9px;
+    background: linear-gradient(145deg, #659084, #557a6f);
+    box-shadow:  5px 5px 10px #52756b, 
+                 -5px -5px 10px #6a998b;
+}
+
+.searchBar input[type=submit]:hover, .addBar input[type=submit]:hover{
+    box-shadow: -2px -2px 5px #6a998b, 2px 2px 5px #52756b;
+}
+
+
+.task{
+    margin: 50px 100px;
+    padding: 50px;
+    border-radius: 9px;
+    background: linear-gradient(145deg, #557a6f, #659084);
+    box-shadow:  20px 20px 40px #567c71, 
+             -20px -20px 40px #669285;
+}
+
+.task ul li{
+    list-style: none;
+    margin: 5px;
+    color: #425e56;
+    text-shadow: 1px 1px 1px #6c9b8d;
+    padding: 10px 05px;
+    font-size: 1.5em;
+}
+
+.task ul li img{
+    display: inline-block;
+    float: right;
+    color: blue;
+    cursor: pointer;
+    /* float: left; */
+}
+
+.task ul li:hover{
+    border-radius: 9px;
+    background: #5e877b;
+    box-shadow: inset 6px 6px 12px #567c71, 
+                inset -6px -6px 12px #669285;
+}
+
 
 @media only screen and (max-width: 768px){
-    .container{display: none;}
+    .task{display: none;}
+    .addBar{display: none;}
+    .searchBar{display: none;}
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {...}
+@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
+@media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
+@media only screen and (min-width: 768px) {}
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
+@media only screen and (min-width: 992px) {}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 1200px) {}
 
 /*  Andamos ruleta, en una camioneta, recogimos la vaina que llego la avionetaaaa 🎵🎵  */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 4px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2f6655;
+    border: 1px solid #6c9b8d;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 4px;
+    top: -02px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
