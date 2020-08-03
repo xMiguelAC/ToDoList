@@ -10,7 +10,7 @@ Frm.addEventListener('keyup', function(e){
     const tareas = losUl.getElementsByTagName('li');
 
     Array.from(tareas).forEach(function(homework) {
-        // const NameTask = homework.children[1].textContent;        ***Esta asi para aplica buena practica**
+        // const NameTask = homework.children[1].textContent;        ***Aqui es para aplica buena practica**
         const NameTask = homework.children[1].textContent;
         if(NameTask.toLowerCase().indexOf(term) != -1){
                 homework.style.display = 'block';
