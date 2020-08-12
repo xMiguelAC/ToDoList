@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    /* font-weight: lighter; */
     box-sizing: border-box;
 }
 
@@ -18,12 +19,11 @@ body{
 .neum{
     width: 90%;
     max-width: 900px;
-    height: 100vh;
+    height: 100%;
 
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
-    padding-bottom: 55vh;
 
     border-radius: 50px 50px 0px 0px;
     background: linear-gradient(145deg, #557a6f, #659084);
@@ -76,6 +76,9 @@ body{
     border: none;
 } */
 
+input[type=checkbox]{
+    cursor: pointer;
+}
 
   .task input:checked{
     background-color: #4b6c62;
@@ -129,11 +132,16 @@ body{
                 inset -6px -6px 12px #669285;
 }
 
+.addBar{
+    padding-bottom: 50px;
+}
 
 @media only screen and (max-width: 768px){
+    .searchBar{display: none;}
     .task{display: none;}
     .addBar{display: none;}
-    .searchBar{display: none;}
+    .neum{padding-bottom: 350px;
+          border-radius: 50px;}
 }
 
 /* Extra small devices (phones, 600px and down) */
